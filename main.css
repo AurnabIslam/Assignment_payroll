@@ -1,0 +1,22 @@
+table{
+    width: 70%;
+    text-align: left;
+}
+td{
+    padding: 3px 2px;
+}
+input{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1em;
+    width: 100%;
+}
+h1{
+    font-size: 2em;
+}
+select{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1em;
+    width: 100%;
+}

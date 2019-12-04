@@ -8,23 +8,44 @@
     <title>Document</title>
 </head>
 <body>
-    <!--Basic Information-->
-    <h1>Employee Number:</h1><input type="text" name="" id="employee_number">
-    <h1>Employee Name:</h1><input type="text" name="" id="employee_name">
-    <h1>Department:</h1><input type="text" name="" id="employee_department">
-    <h1>Hours Worked:</h1><input type="text" name="" id="employee_hours_worked">
-    <h1>Employee Type:</h1>
-    <select name="" id="employee_type">
-        <option value="F">Faculty</option>
-        <option value="R">Regular</option>
-    </select>
-
-    <!--Faculty Extra-->
-    <h1>Faculty Qualification:</h1>
-    <select name="" id="qualification_type">
-        <option value="M">Master's Degree</option>
-        <option value="B">Bachelor's Degree</option>
-    </select>
+    <!--Table-->
+    <table>
+        
+        <tbody>
+            <!--Basic Information-->
+        <tr>
+            <td><h1>Employee Number:</h1></td><td><input type="text" name="" id="employee_number"></td>
+        </tr>
+        <tr>
+            <td><h1>Employee Name:</h1></td><td><input type="text" name="" id="employee_name"></td>
+        </tr>
+        <tr>
+            <td><h1>Department:</h1></td><td><input type="text" name="" id="employee_department"></td>
+        </tr>
+        <tr>
+            <td><h1>Hours Worked:</h1></td><td><input type="text" name="" id="employee_hours_worked"></td>
+        </tr>
+        <tr>
+            <td><h1>Employee Type:</h1></td>
+            <td>
+                <select name="" id="employee_type">
+                    <option value="F">Faculty</option>
+                    <option value="R">Regular</option>
+                </select>
+            </td>
+        </tr>
+            <!--Faculty Extra-->
+        <tr>
+            <td><h1>Faculty Qualification:</h1></td>
+            <td>    
+                <select name="" id="qualification_type">
+                    <option value="M">Master's Degree</option>
+                    <option value="B">Bachelor's Degree</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <!--ends-->
     
     <script src="app.js"></script>
 </body>
