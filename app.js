@@ -13,6 +13,7 @@ var wage_paid;
 var income_tax;
 var net_income;
 var fixed_salary;
+var overtime;
 var employee_regular_hourly_rate;
 
 
@@ -39,11 +40,6 @@ function  calulateButton() {
     var employee_hours_worked = document.getElementById('employee_hours_worked').value;
     var employee_type = document.getElementById('employee_type').value;
 
-    console.log("Employee Name:" + employee_name);
-    console.log("Employee Number:" + employee_number);
-    console.log("Department:" + employee_department)
-    console.log("Hours Worked:" + employee_hours_worked);
-    console.log("Employee type:" + employee_type);
 
     //Allowance Calculation
 
@@ -62,28 +58,17 @@ function  calulateButton() {
         fixed_salary = document.getElementById('fixed_salary').value;
         employee_regular_hourly_rate = (fixed_salary/160);
 
-        if (employee_hours_worked < 160){
+        if (employee_hours_worked == 160){
+            wage_paid=fixed_salary;
+        }else if(employee_hours_worked<160){
             wage_paid = employee_regular_hourly_rate*employee_hours_worked;
-
-            console.log("LESS than 160 hrs, Pay is $"+wage_paid);
-        } else if(employee_hours_worked > 160){
-            var overtime;
+        }else{
             overtime = employee_hours_worked-160;
-            console.log("Overtime = "+overtime);
-
-            wage_paid = fixed_salary + employee_regular_hourly_rate*overtime*2;
-
-            console.log("MORE than 160 hrs,Pay is $"+wage_paid);
-        } else{
-            wage_paid = fixed_salary;
-
-            console.log("Fixed Salary $"+wage_paid);
+            wage_paid = fixed_salary + 2*employee_regular_hourly_rate*overtime;
         }
     }
 
     gross_income = allowance + wage_paid;
-
-    console.log("Gross Income is $" + gross_income);
 
     if (gross_income > 3000){
         health_surcharge_fee = 33;
@@ -94,13 +79,19 @@ function  calulateButton() {
     
     if(gross_income < tax_free_allowance){
         income_tax=0;
-        console.log("You don\'t have to pay income tax");
     } else{
         income_tax = gross_income*canadian_income_tax;
-        console.log("Income Tax: $ " + income_tax);
     }
 
     net_income = gross_income - income_tax - health_surcharge_fee;
-    console.log("Your Net Income is $ " + net_income);
+    console.log("hello");
 
+    alert(
+        "Employee Name: "+employee_name+"\n"+
+        "Employee Number: "+employee_number+"\n"+
+        "Department: "+employee_department+"\n"+
+        "Gross Income: $"+gross_income+"\n"+
+        "Income Tax: $"+income_tax+"\n"+
+        "Net Income: $"+net_income
+    );
 }
