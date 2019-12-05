@@ -10,11 +10,9 @@
 <body>
     <!--Table-->
     <table>
-        
-        <tbody>
             <!--Basic Information-->
         <tr>
-            <td><h1>Employee Number:</h1></td><td><input type="text" name="" id="employee_number" placeholder="ID"></td>
+            <td><h1>Employee Number:</h1></td><td><input type="number" name="" id="employee_number" placeholder="ID"></td>
         </tr>
         <tr>
             <td><h1>Employee Name:</h1></td><td><input type="text" name="" id="employee_name" placeholder="Full Name"></td>
@@ -23,7 +21,7 @@
             <td><h1>Department:</h1></td><td><input type="text" name="" id="employee_department" placeholder="Your Department"></td>
         </tr>
         <tr>
-            <td><h1>Hours Worked:</h1></td><td><input type="text" name="" id="employee_hours_worked" placeholder="Total Number of Hours Worked"></td>
+            <td><h1>Hours Worked:</h1></td><td><input type="number" name="" id="employee_hours_worked" placeholder="Total Number of Hours Worked"></td>
         </tr>
         <tr>
             <td><h1>Employee Type:</h1></td>
@@ -45,6 +43,11 @@
                     <option value="B">Bachelor's Degree</option>
                 </select>
             </td>
+        </tr>
+            <!--Regular Workers Extra-->
+        <tr id="employee_regular_salay">
+            <td><h1>Salary: </h1></td>
+            <td><input type="number" placeholder="Enter Fixed Salary" id="fixed_salary"></td>
         </tr>
     </table>
     <!--ends-->
