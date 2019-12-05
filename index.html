@@ -28,17 +28,19 @@
         <tr>
             <td><h1>Employee Type:</h1></td>
             <td>
-                <select name="" id="employee_type">
+                <select name="" id="employee_type" onclick="checkFacultyType()" aria-placeholder="Select Type">
+                    <option selected="selected" class="default_select_option">Select Your Beverage</option>
                     <option value="F">Faculty</option>
                     <option value="R">Regular</option>
                 </select>
             </td>
         </tr>
             <!--Faculty Extra-->
-        <tr>
+        <tr id="row_faculty_qualification">
             <td><h1>Faculty Qualification:</h1></td>
             <td>    
                 <select name="" id="qualification_type">
+                    <option selected="selected" class="default_select_option">Select Your Beverage</option>
                     <option value="M">Master's Degree</option>
                     <option value="B">Bachelor's Degree</option>
                 </select>

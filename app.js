@@ -15,7 +15,17 @@ if (gross_income>3000){
     health_surcharge_fee=19.20;
 }
 
+function checkFacultyType(){
+    var f_type = document.getElementById('employee_type').value;
+    if (f_type == 'F'){
+        document.getElementById('row_faculty_qualification').style.display = 'block';
+    } else {
+        document.getElementById('row_faculty_qualification').style.display = 'none';
+    }
+}
+
 function  calulateButton() {
+
     var employee_number = document.getElementById('employee_number').value;
     var employee_name = document.getElementById('employee_name').value;
     var employee_department = document.getElementById('employee_department').value;
@@ -24,6 +34,8 @@ function  calulateButton() {
 
     console.log("Employee Name:" + employee_name);
     console.log("Employee Number:" + employee_number);
+    console.log("Department:"+ employee_department)
     console.log("Hours Worked:" + employee_hours_worked);
     console.log("Employee type:" + employee_type);
+
 }

@@ -32,3 +32,6 @@ button{
 button:hover{
     background: rgba(25, 158, 219, 0.575);
 }
+.default_select_option{
+    display: none;
+}
