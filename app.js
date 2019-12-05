@@ -13,6 +13,7 @@ var wage_paid;
 var income_tax;
 var net_income;
 var fixed_salary;
+var employee_regular_hourly_rate;
 
 
 
@@ -59,19 +60,24 @@ function  calulateButton() {
         allowance = 0; // Regular Employees get no allowance
         
         fixed_salary = document.getElementById('fixed_salary').value;
+        employee_regular_hourly_rate = (fixed_salary/160);
 
         if (employee_hours_worked < 160){
-            wage_paid = (fixed_salary / 160) * employee_hours_worked;
+            wage_paid = employee_regular_hourly_rate*employee_hours_worked;
 
-            console.log("The Employee worked less than 160 hrs, therefore his pay is $ " + wage_paid);
+            console.log("LESS than 160 hrs, Pay is $"+wage_paid);
         } else if(employee_hours_worked > 160){
-            wage_paid = fixed_salary + ((fixed_salary / 160) * ((employee_hours_worked - 160) * 2));
+            var overtime;
+            overtime = employee_hours_worked-160;
+            console.log("Overtime = "+overtime);
 
-            console.log("The Employee worked more than 160 hrs, therefore his pay is $ " + wage_paid);
+            wage_paid = fixed_salary + employee_regular_hourly_rate*overtime*2;
+
+            console.log("MORE than 160 hrs,Pay is $"+wage_paid);
         } else{
             wage_paid = fixed_salary;
 
-            console.log("Fixed Salary $ " + wage_paid);
+            console.log("Fixed Salary $"+wage_paid);
         }
     }
 
