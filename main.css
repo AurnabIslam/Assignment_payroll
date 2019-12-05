@@ -20,3 +20,15 @@ select{
     font-size: 1em;
     width: 100%;
 }
+button{
+    background: rgb(25, 158, 219);
+    color: #fff;
+    font-size: 1.5em;
+    padding: 0.3em;
+    width: 20%;
+    height: auto;
+    border: none;
+}
+button:hover{
+    background: rgba(25, 158, 219, 0.575);
+}
