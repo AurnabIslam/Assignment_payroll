@@ -2,6 +2,19 @@ table{
     width: 70%;
     text-align: left;
 }
+thead{
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    background: rgb(25, 158, 219);
+    color: #fff;
+}
+tfoot{
+    width: 100%;
+    font-size: 1.5em;
+    background: rgb(25, 158, 219);
+    color: #fff;
+}
 td{
     padding: 3px 2px;
 }

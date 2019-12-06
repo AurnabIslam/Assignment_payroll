@@ -16,10 +16,19 @@ var fixed_salary;
 var overtime;
 var employee_regular_hourly_rate;
 
+var employee_number;
+var employee_name;
+var employee_department;
+var employee_hours_worked;
+var employee_type;
 
+var qualification_type;
+
+var f_type;
+document.getElementById('pay_slip').style.display = 'none';
 
 function checkFacultyType(){
-    var f_type = document.getElementById('employee_type').value;
+    f_type = document.getElementById('employee_type').value;
     if (f_type == 'F'){
         document.getElementById('row_faculty_qualification').style.display = 'block';
         document.getElementById('employee_regular_salay').style.display = 'none';
@@ -34,17 +43,17 @@ function checkFacultyType(){
 
 function  calulateButton() {
 
-    var employee_number = document.getElementById('employee_number').value;
-    var employee_name = document.getElementById('employee_name').value;
-    var employee_department = document.getElementById('employee_department').value;
-    var employee_hours_worked = document.getElementById('employee_hours_worked').value;
-    var employee_type = document.getElementById('employee_type').value;
+    employee_number = document.getElementById('employee_number').value;
+    employee_name = document.getElementById('employee_name').value;
+    employee_department = document.getElementById('employee_department').value;
+    employee_hours_worked = document.getElementById('employee_hours_worked').value;
+    employee_type = document.getElementById('employee_type').value;
 
 
     //Allowance Calculation
 
     if (employee_type == 'F'){          // For Faculties
-        var qualification_type = document.getElementById('qualification_type').value;
+        qualification_type = document.getElementById('qualification_type').value;
         if(qualification_type == 'M'){       // With Master's
             allowance = faculty_masters_allowance;
             wage_paid = employee_hours_worked*faculty_masters_rate;
@@ -84,14 +93,11 @@ function  calulateButton() {
     }
 
     net_income = gross_income - income_tax - health_surcharge_fee;
-    console.log("hello");
+    
+    printCalc();
+}
 
-    alert(
-        "Employee Name: "+employee_name+"\n"+
-        "Employee Number: "+employee_number+"\n"+
-        "Department: "+employee_department+"\n"+
-        "Gross Income: $"+gross_income+"\n"+
-        "Income Tax: $"+income_tax+"\n"+
-        "Net Income: $"+net_income
-    );
+function printCalc(){
+    document.getElementById('get_input').style.display = 'none';
+    document.getElementById('pay_slip').style.display = 'initial';
 }

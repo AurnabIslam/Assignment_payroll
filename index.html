@@ -9,7 +9,7 @@
 </head>
 <body>
     <!--Table-->
-    <table>
+    <table id="get_input">
             <!--Basic Information-->
         <tr>
             <td><h1>Employee Number:</h1></td><td><input type="number" name="" id="employee_number" placeholder="ID"></td>
@@ -49,16 +49,63 @@
             <td><h1>Salary: </h1></td>
             <td><input type="number" placeholder="Enter Fixed Salary" id="fixed_salary"></td>
         </tr>
-        <tr>
-            <td>    
-                <button onclick="calulateButton()">
-                    Calculate
-                </button>
-            </td>
-            <td></td>
-        </tr>
+        <tfoot>
+            <tr>
+                <td>    
+                    <button onclick="calulateButton()">
+                        Calculate
+                    </button>
+                </td>
+            </tr>
+        </tfoot>
+        
     </table>
     <!--ends-->
+    <div id="pay_slip">
+        <table>
+            <thead>
+                <tr>
+                    <th><h1>Pay Slip</h1></th>
+                </tr>
+            </thead>
+            <tr>
+                <td><h1>Employee Name:</h1></td>
+                <td id="print_employee_name"></td>
+            </tr>
+            <tr>
+                <td><h1>Employee Number:</h1></td>
+                <td id="print_employee_number"></td>
+            </tr>
+            <tr>
+                <td><h1>Employee Type:</h1></td>
+                <td id="print_employee_type"></td>
+            </tr>
+            <tr>
+                <td><h1>Employee Department:</h1></td>
+                <td id="print_employee_department"></td>
+            </tr>
+            <tr>
+                <td><h1>Gross Pay:</h1></td>
+                <td id="print_gross_pay"></td>
+            </tr>
+            <tr>
+                <td><h1>Income Tax:</h1></td>
+                <td id="print_income_tax"></td>
+            </tr>
+            <tr>
+                <td><h1>Net Income:</h1></td>
+                <td id="print_net_income"></td>
+            </tr>
+            <tr>
+                <td><h1></h1></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><h1></h1></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
     
 
     
