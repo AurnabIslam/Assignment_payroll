@@ -104,7 +104,7 @@ function printCalc(){
     document.getElementById('print_employee_number').innerHTML= employee_number;
     document.getElementById('print_employee_type').innerHTML= employee_type;
     document.getElementById('print_employee_department').innerHTML= employee_department;
-    document.getElementById('print_gross_pay').innerHTML= gross_income;
-    document.getElementById('print_income_tax').innerHTML= income_tax;
-    document.getElementById('print_net_income').innerHTML= net_income;
+    document.getElementById('print_gross_pay').innerHTML= '$ ' + gross_income;
+    document.getElementById('print_income_tax').innerHTML= '$ ' + income_tax;
+    document.getElementById('print_net_income').innerHTML= '$ ' + net_income;
 }

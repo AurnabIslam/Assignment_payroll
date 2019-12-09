@@ -1,6 +1,16 @@
+html{
+    background: #FEF6C9;
+    color: #000;
+    font-family: 'Ubuntu Mono', monospace;
+}
 table{
     width: 70%;
     text-align: left;
+    background: #878E88;
+    color: #fff;
+    padding-left: 10%;
+    padding-right: 10%;
+    border-radius: 17px;
 }
 thead{
     width: 100%;
@@ -8,12 +18,14 @@ thead{
     font-size: 1.5em;
     background: rgb(25, 158, 219);
     color: #fff;
+    border-radius: 17px;
 }
 tfoot{
     width: 100%;
     font-size: 1.5em;
     background: rgb(25, 158, 219);
     color: #fff;
+    border-radius: 17px;
 }
 td{
     padding: 3px 2px;
